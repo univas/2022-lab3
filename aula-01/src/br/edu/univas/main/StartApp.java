@@ -37,13 +37,11 @@ public class StartApp {
         //"NullPointerException"
         //car4.accelerate(15);
 
-
         car = car2;
         car4 = car;
 
         Car car5 = new Car();
         car5 = car;
-
     }
 
     /*

@@ -1,5 +1,7 @@
 package br.edu.univas.vo;
 
+import java.util.Objects;
+
 public class Car {
 
     private String color;
@@ -49,5 +51,24 @@ public class Car {
 
     public void setYearRelease(int yearRelease) {
         this.yearRelease = yearRelease;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, modelYear, yearRelease);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Car other = (Car) obj;
+        return Objects.equals(color, other.color) &&
+                modelYear == other.modelYear &&
+                yearRelease == other.yearRelease;
     }
 }
