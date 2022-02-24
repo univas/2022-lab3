@@ -39,10 +39,16 @@ public class StartApp {
 //        studentList.add(10);
         studentList.add(student2);
 
+        studentList.add(0, student2);
+        studentList.add(1, null);
+        studentList.add(2, student1);
+
         for (int i = 0; i < studentList.size(); i++) {
             Student student = studentList.get(i);
-            System.out.println("Name: " + student.getName());
-            System.out.println("RA: " + student.getRa());
+            if (student != null) {
+                System.out.println("Name: " + student.getName());
+                System.out.println("RA: " + student.getRa());
+            }
         }
 
 
