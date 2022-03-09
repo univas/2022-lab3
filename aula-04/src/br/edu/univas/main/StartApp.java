@@ -14,8 +14,7 @@ public class StartApp {
         System.out.println("Ano Nascimento: " +
                 cat1.getBirthdayYear());
 
-        Dog dog1 = new Dog();
-        dog1.setName("Dog1");
+        Dog dog1 = new Dog("Dog1");
         dog1.setBirthdayYear(2018);
         System.out.println("Cachorro: ");
         System.out.println("Nome: " + dog1.getName());
