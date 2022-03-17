@@ -3,6 +3,7 @@ package br.edu.univas.main;
 import br.edu.univas.vo.*;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class StartApp {
@@ -13,6 +14,26 @@ public class StartApp {
 
         cadastraCompetidores(competidores);
 
+        Random random = new Random();
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < competidores.size(); j++) {
+                Competidor competidor = competidores.get(j);
+                int aux = random.nextInt(16) + 5;
+                competidor.getVeiculo().acelerar(aux);
+            }
+        }
+
+        Competidor vencedor = competidores.get(0);
+        for (int i = 1; i < competidores.size(); i++) {
+            Competidor competidor = competidores.get(i);
+
+            if (competidor.getVeiculo().getVelocidadeAtual() >
+                vencedor.getVeiculo().getVelocidadeAtual()) {
+                vencedor = competidor;
+            }
+        }
+
+        System.out.println("O vencedor foi: " + vencedor.getApelido());
     }
 
     public static void cadastraCompetidores(ArrayList<Competidor> competidores) {
