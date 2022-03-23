@@ -28,7 +28,7 @@ public class ProjetoController {
         int quantidadeFuncionarios = scanner.nextInt();
         ArrayList<Funcionario> list = new ArrayList<>();
         for (int i = 0; i < quantidadeFuncionarios; i++) {
-            Funcionario f1 = fController.createFuncionario();    
+            Funcionario f1 = fController.createFuncionario();
             list.add(f1);
         }
 
