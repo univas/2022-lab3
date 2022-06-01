@@ -50,7 +50,5 @@ public class StartApp {
                 System.out.println("RA: " + student.getRa());
             }
         }
-
-
     }
 }
