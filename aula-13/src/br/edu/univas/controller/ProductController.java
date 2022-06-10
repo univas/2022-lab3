@@ -6,7 +6,7 @@ public class ProductController {
 
     public void createProduct() {
         //faz alguma coisa
-        int i = 10;
+        int i = 100;
 
         if (i < 50) {
             throw new ProductException();
